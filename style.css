@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* CSS For scroll effect  */
+body,
+html{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      scroll-behavior: smooth;
+      scroll-padding: 3rem;
+      font-family: 'Poppins', sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+svg {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+}
+  
+.scrollElement {
+      position: absolute;
+      height: 6000px;
+      width: 100px;
+      top: 0;
+      z-index: 0;
+}
+/* End of scroll effect */
+
+nav{
+      background-color: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+      
+}
+.nav-item .nav-link{
+    color: black;
+}
+.nav-item .nav-link:hover{
+    color: #7f00ff;
+    /* color: #fefefe; */
+}
+
+.hello{
+      font-size: 35px;
+      color: black;
+  }
+#hello{
+      height: 50px;
+      width: 50px;
+    }
+  .iam{
+      font-weight: 900;
+      color: black;
+  }
+  .multiText{
+      color: #7f00ff;
+      text-transform: capitalize;
+  }
+  #iam2{
+      font-size:10vw;
+  }
+.hiimg{
+animation: waving-hand 2.5s infinite;
+transform-origin: 70% 70%;
+}
+@keyframes waving-hand{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(14deg);
+    }
+    20%{
+        transform: rotate(-8deg);
+    }
+    30%{
+        transform: rotate(14deg);
+    }
+    40%{
+        transform: rotate(-4.0deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+  button{
+      outline: none;
+      border: none;
+      cursor: pointer;
+      font-weight: 400;
+      color: #fff;
+      background-color: #7f00ff;
+      padding:  9px!important;
+      margin: 1vw 1vw!important;
+      text-transform: capitalize !important;
+      box-shadow: 0 15px 10px rgba(0,0,0,0.4);
+  }
+
+  button:hover{
+      background-color: #400f71;
+  }
+  p{  
+      text-align: justify;
+      color: white;
+      font-size:medium;
+      font-weight:bold;
+      
+      /* -webkit-text-stroke: 0.7px  rgb(0, 0, 0); */
+  }
+  li{
+      list-style: none;
+    }
+    .container1 .card{
+      background-color: rgba(255,255,255,0.1);
+      width: 80px;
+      height: 80px;
+      margin: 20px;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+      border-radius: 15px ;
+      overflow: hidden;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      border-left: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+  }
+  
+  /* style for certificate cards */
+  .cer-container{
+    position: relative;
+    min-height: 100vh;
+    /* background: #ddd; */
+    }
+    .cer-container .image-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .cer-container .image-container .certificate{
+        height: 200px;
+        width: 300px;
+        overflow: hidden;
+        border: 3px solid  #7f00ff;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .cer-container .image-container .certificate img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: .2s linear; 
+    }
+    .cer-container .image-container .certificate:hover img{
+        transform: scale(1.1);
+    }
+    .cer-container .popup-image{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0,0.9);
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        display: none;
+        
+    }
+    .cer-container .popup-image span{
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        font-size: 60px;
+        font-weight: bolder;
+        color:  #7f00ff;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .cer-container .popup-image img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 5px solid #7f00ff;
+        border-radius: 15px;
+        width: 750px;
+        object-fit: cover;
+    }
+    @media (max-width:768px) {
+        .cer-container .popup-image img{
+            width: 95%;
+            
+        }
+        
+    }
+
+  /* end of certificate cards */
+  .container2 .card1{
+    /* background-color: #22668D; */
+    background-color: rgba(255,255,255,0.1);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* margin: 30px; */
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+    /* box-shadow: 20px 20px 50px rgba(0,0,0,0.5); */
+    border-radius: 15px ;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-left: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+}
+
+.container2 .card1 .content{
+    /* padding: 20px; */
+    text-align: center;
+    /* transform: translateY(100px);
+    opacity: 0; */
+    transition: 0.5s ;
+}
+.container2 .card1 .content img{
+    height: 100px;
+    width: 100px;
+}
+
+/* style for text animation */
+.hide1{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+/* end of text animation */
+.hide2{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+.show2{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+.hidden1:nth-child(2){
+    transition-delay: 200ms;
+
+}
+.hidden1:nth-child(3){
+    transition-delay: 300ms;
+
+}
+.hidden1:nth-child(4){
+    transition-delay: 400ms;
+
+}
+.hidden1:nth-child(5){
+    transition-delay: 500ms;
+
+}
+
+.hidden1:nth-child(6){
+    transition-delay: 600ms;
+
+}
+.hidden1:nth-child(7){
+    transition-delay: 700ms;
+
+}
+.hidden1:nth-child(8){
+    transition-delay: 800ms;
+
+}
+.hidden1:nth-child(9){
+    transition-delay: 900ms;
+
+}
+
+/* Style for contact page */
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    
+}
+.container5{
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgb(0,0,0,0.1);
+    border: 1px solid rgb(255,255,255,0.5);
+    border-right: 1px solid rgb(255,255,255,0.2);
+    border-bottom: 1px solid rgb(255,255,255,0.2);
+}
+
+.form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h2{
+    position: relative;
+    color: #7f00ff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form h2:before{
+    content: '';
+    position: absolute;
+    left: 76px;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background: #7f00ff;
+}
+
+ .form .inputBx{
+    width: 100%;
+    margin-top: 20px;
+ }
+
+ .form .inputBx input{
+     width: 100%;
+     background: rgba(255,255,255,0.2);
+     border: none;
+     outline: none;
+     padding: 10px 20px;
+     border-radius: 35px;
+     border: 1px solid rgb(255,255,255,0.5);
+     border-right: 1px solid rgb(255,255,255,0.2);
+     border-bottom: 1px solid rgb(255,255,255,0.2);
+     font-size: 16px;
+     letter-spacing: 1px;
+     color: #7f00ff;
+     box-shadow: 0 5px 15px rgb(0,0,0,0.05);
+ }
+
+ .form .inputBx textarea{
+    width: 315px;
+    height: 140px;
+    resize: none;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid rgb(255,255,255,0.5);
+    border-right: 1px solid rgb(255,255,255,0.2);
+    border-bottom: 1px solid rgb(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color:  #7f00ff!important;
+    box-shadow: 0 5px 15px rgb(0,0,0,0.05);
+}
+
+.form .inputBx input::placeholder{
+    color: black;
+}
+
+.form .inputBx textarea::placeholder{
+    color: black;
+}
+
+.form .inputBx input[type="submit"]{
+    background: #7f00ff;
+    color: white;
+    max-width: 150px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    font-weight: 600;
+    transition: .5s ease-in-out;
+}
+
+.form .inputBx input[type="submit"]:hover{
+    background: #450c7e;
+    color: #fff;
+    font-weight: 600;
+}
+
+.text{
+    margin-top: 5px;
+    color: black;
+}
+
+
