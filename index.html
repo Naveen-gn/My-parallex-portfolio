@@ -28,12 +28,15 @@
                 // these IDs from the previous steps
                 emailjs.sendForm('service_36zu4za', 'template_r3bau5n', this)
                     .then(function() {
-                        console.log('SUCCESS!');
-                        alert ('success');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                        alert ('failed');
+                      
+                        alert ('Your Message has been submited sucessfully....');
+                        document.getElementById('contact-form').reset();
+                    },
+                    function(error) {
+                      alert ('Something went wrong!Please try again later');
+                      document.getElementById('contact-form').reset();
                     });
+                    
             });
         }
     </script>
@@ -410,7 +413,7 @@
         <h1 class="iam ms-3"> <span id="iam2">I'm </span><span class="multiText"></span> </h1>
         <h1 class="hello ms-3 hide2" style="color:indigo;">Let Me Introduce Myself✌🏻</h1>
         <ul >
-            <li class="hide1"> <p class=" ms-3 me-3">⭐I fell in love with programming and I have at least learnt something, I think….</p></li>
+            <li class="hide1"> <p class=" ms-3 me-3">⭐I fell in love with programming and I have at least learnt something....</p></li>
             <li class="hide1"> <p class=" ms-3 me-3">⭐I am fluent in classics like C, Javascript and Python.</p></li>
             <li class="hide1"> <p class=" ms-3 me-3">⭐My field of Interest's are building new  BlockChain, Web Technologies and Products and also in areas related to Mobile Application Development.</p></li>
             <li class="hide1"> <p class=" ms-3 me-3">⭐Whenever possible, I also apply my passion for developing products with Node.js and Modern Javascript Library and Frameworks  like React.js and Next.js</p></li>
@@ -427,9 +430,12 @@
               </div>
 
               
-              <div class=" col-12 col-md-6 col-lg-6 mt-sm-4 mt-4 mt-md-5 mt-lg-5 z-1 hide2 hidden1 "> 
+              <div class=" col-12 col-md-6 col-lg-6 mt-sm-4  mt-md-5 mt-lg-5 z-1 hide2 hidden1 "> 
 
-                
+                <div class="d-flex justify-content-center">
+
+                  <img src="./Images/portfolio.png" >
+                </div>
                   <!-- <div class="card mx-auto  mt-lg-5 mt-md-5 ms-md-auto  rounded-circle" style="width: 18rem; background-color: rgba(255,255,255,0.1); box-shadow: 0 2px 4px 0 rgba(0,0,0,.5); backdrop-filter: blur(10px); ">
                     <img src="." class="card-img-top rounded-5" style="border: 3px solid #7f00ff;">
                     <div class="">
@@ -449,11 +455,11 @@
 
 <!-- Start of about page -->
 
-<div clas="container-fluid mt-5" id="about">
+<div clas="container-fluid mt-3" id="about">
   <div class="row " >
 
     <div class="col-12 col-md-12 col-lg-7  z-1 ">
-      <h1 class="hello text-center mb-4 mt-4 hide1" style="color: #7f00ff;">Know Who I'M</h1>
+      <h1 class="hello text-center mb-4  hide1" style="color: #7f00ff;">Know Who I'M</h1>
        
             <ul class="hide1">
                 <li><p class="  mt-3 me-md-3 me-sm-3 me-3 ">⭐I am Naveen, and I am from Cuddalore, Tamil Nadu, India.</p></li>
@@ -465,7 +471,7 @@
 </div>
 
             
-    <div class=" col-12 col-md-12 col-lg-5 mt-sm-4 mt-4 mt-md-5 mt-lg-5 z-1 "> 
+    <div class=" col-12 col-md-12 col-lg-5 z-1 "> 
               
       <h1 class="hello  ms-2  text-center mb-4 hide2" style="color: #7f00ff;transition-delay: 400ms;">Apart from coding, I love to do!</h1>
       <div class="d-flex justify-content-center">
@@ -635,7 +641,7 @@
 
 <!-- Start of Certifications Page -->
 
-<div class="container-fluid mt-4" id="Certifications">
+<div class="container-fluid " id="Certifications">
   <div class="row ">
     <div class="col-12 z-1 "><h1 class="hello text-center  mb-4 hide2" style="color: #7f00ff;">My Certifications</h1></div>
     
@@ -666,6 +672,10 @@
 <div class="popup-image">
   <span>&times;</span>
   <img src="./Images/Introduction to C_certificate.jpg" alt="" height="500px" width="700px">
+  <div class="d-flex justify-content-center ">
+    <button class="btn-primary rounded-3" id="imgdownloadButton">Download</button>
+  </div>
+
 </div>
   </div>
   </div>
@@ -817,6 +827,9 @@
       document.querySelector('.Projects').style.display='flex'
       
   }
+
+ 
+
 </script>
 <!-- end of certificate cards -->
 
